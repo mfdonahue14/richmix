@@ -59,71 +59,71 @@
 
         <!-- First Featurette -->
         <div class="featurette" id="about">
-            <img class="featurette-image img-circle img-responsive" src="assets/img/sean-2.jpg">
+            <img class="featurette-image img-circle img-responsive" src="../images/sean-2.jpg">
            </div>
                 <h2 class="featurette-heading">
         <!-- Second Featurette -->
         <div class="featurette" id="services"><center>
-            <img class="featurette-image img-circle img-responsive" src="assets/img/emily-2.jpg">
+            <img class="featurette-image img-circle img-responsive" src="../images/emily-2.jpg">
              <h2 class="featurette-heading"></center>
                <h2 class="featurette-heading">
              </div>
 
 <div class="featurette" id="services">
-            <img class="featurette-image img-circle img-responsive pull-right" src="assets/img/john-2.jpg">
+            <img class="featurette-image img-circle img-responsive pull-right" src="../images/john-2.jpg">
             <h2 class="featurette-heading">
         </div>
 
 <!-- Second Featurette -->
         <div class="featurette" id="services">
-            <img class="featurette-image img-circle img-responsive" src="assets/img/tucker-2.jpg">
+            <img class="featurette-image img-circle img-responsive" src="../images/tucker-2.jpg">
             <h2 class="featurette-heading">
         </p></div>
 
  <div class="featurette" id="services"><center>
-            <img class="featurette-image img-circle img-responsive" src="assets/img/prashanth-2.jpg">
+            <img class="featurette-image img-circle img-responsive" src="../images/prashanth-2.jpg">
             <h2 class="featurette-heading"></center>
         </div> <br>
 
          <div class="featurette" id="services"><center>
-            <img class="featurette-image img-circle img-responsive" src="assets/img/hunter-2.jpg"></center>
+            <img class="featurette-image img-circle img-responsive" src="../images/hunter-2.jpg"></center>
             <h2 class="featurette-heading">
         </div>
 
          <div class="featurette" id="services">
-            <img class="featurette-image img-circle img-responsive pull-left" src="assets/img/katie-2.jpg">
+            <img class="featurette-image img-circle img-responsive pull-left" src="../images/katie-2.jpg">
             <h2 class="featurette-heading">
         </div>
 
          <div class="featurette" id="services">
-            <img class="featurette-image img-circle img-responsive pull-right" src="assets/img/grogs-2.jpg" width="400" height="400">
+            <img class="featurette-image img-circle img-responsive pull-right" src="../images/grogs-2.jpg" width="400" height="400">
             <h2 class="featurette-heading">
         </div>
 
          <div class="featurette" id="services"><center>
-            <img class="featurette-image img-circle img-responsive" src="assets/img/julia-2.jpg"></center>
+            <img class="featurette-image img-circle img-responsive" src="../images/julia-2.jpg"></center>
 
               </div>
         <div class="featurette" id="services">
          <br>   
-        <img class="featurette-image img-circle img-responsive pull-left" src="assets/img/pete-2.jpg" width="400" height="300">
-        <img class="featurette-image img-circle img-responsive pull-right" src="assets/img/chris-2.jpg" width="700" height="550"> 
+        <img class="featurette-image img-circle img-responsive pull-left" src="../images/pete-2.jpg" width="400" height="300">
+        <img class="featurette-image img-circle img-responsive pull-right" src="../images/chris-2.jpg" width="700" height="550"> 
         <br>
               </div>
 
               <div class="featurette" id="about">
-            <img class="featurette-image img-circle img-responsive" src="assets/img/kels-2.jpg" width="900" height="900">
+            <img class="featurette-image img-circle img-responsive" src="../images/kels-2.jpg" width="900" height="900">
            </div>
                 <h2 class="featurette-heading">
 
         <!-- Third Featurette -->
         <div class="featurette" id="contact">
           <br>
-            <img class="featurette-image img-circle img-responsive pull-left" src="assets/img/mattie-2.jpg">
+            <img class="featurette-image img-circle img-responsive pull-left" src="../images/mattie-2.jpg">
             <h2 class="featurette-heading">
         </div>
 <div class="featurette" id="services">
-            <img class="featurette-image img-circle img-responsive pull-right" src="assets/img/toby-2.jpg">
+            <img class="featurette-image img-circle img-responsive pull-right" src="../images/toby-2.jpg">
             <h2 class="featurette-heading">
         </div>
 
@@ -156,8 +156,8 @@
 
  $(function() {
     $('.scrollto, .gototop').bind('click',function(event){
-		 var $anchor = $(this);
-		 $('html, body').stop().animate({
+     var $anchor = $(this);
+     $('html, body').stop().animate({
          scrollTop: $($anchor.attr('href')).offset().top
           }, 1500,'easeInOutExpo');
      event.preventDefault();
@@ -172,25 +172,25 @@
 
 <script>
 $(document).ready(function() {
-	$('#subscribeForm').ketchup().submit(function() {
-		if ($(this).ketchup('isValid')) {
-			var action = $(this).attr('action');
-			$.ajax({
-				url: action,
-				type: 'POST',
-				data: {
-					email: $('#address').val()
-				},
-				success: function(data){
-					$('#result').html(data);
-				},
-				error: function() {
-					$('#result').html('Sorry, an error occurred.');
-				}
-			});
-		}
-		return false;
-	});
+  $('#subscribeForm').ketchup().submit(function() {
+    if ($(this).ketchup('isValid')) {
+      var action = $(this).attr('action');
+      $.ajax({
+        url: action,
+        type: 'POST',
+        data: {
+          email: $('#address').val()
+        },
+        success: function(data){
+          $('#result').html(data);
+        },
+        error: function() {
+          $('#result').html('Sorry, an error occurred.');
+        }
+      });
+    }
+    return false;
+  });
 });
 </script> 
 
