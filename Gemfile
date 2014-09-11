@@ -11,6 +11,14 @@ group :production do
      gem 'pg'
      gem 'rails_12factor'
 end
+
+group :production do
+
+gem 'rails_serve_static_assets' 
+gem 'rails_stdout_logging'
+
+end 
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
